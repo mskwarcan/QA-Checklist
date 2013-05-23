@@ -7,3 +7,239 @@ html(lang="en")
     meta(name="viewport", content="width=device-width")
   body
     h1 Jade - node template engine
+    hr
+
+    h2 Best practices
+    ul
+      li Fix broken links
+      li Spelling and grammar
+      li Check website in all browsers
+      li Remove 'www' subdomain
+
+    h2 Mobile
+    ul
+      li MobileOK score of 75+
+      li Use 'viewport' meta-tag
+      li Use correct input types
+      li Manual check using emulators
+
+    h2 Analytics
+    ul
+      li Uptime monitoring
+      li Traffic analysis (GA, others + special click tracking)
+
+    h2 Performance
+    ul
+      li Google Page Speed score of 90+
+      li Yahoo YSlow score of 85+
+      li Optimize HTTP headers
+      li Optimize images
+
+    h2 Usability
+    ul
+      li HTML5 compatibility check
+      li Custom 404 page
+      li Favicon
+      li Use friendly URLs
+      li Add search feature
+      li Environment Integration
+
+    h2 Semantics
+    ul
+      li Add meaning with Microdata
+      li Check the semantics
+
+    h2 SEO
+    ul
+      li SenSEO score of 85+
+      li Google Rich Snippets
+      li robots.txt
+      li XML sitemap
+
+    h2 Code quality
+    ul
+      li HTML validation
+      li CSS validation
+      li Run CSS Lint
+      li Run JSLint/JSHint
+
+    h2 World ready
+    ul
+      li Automated testing
+
+    h2 Accessibility
+    ul
+      li Accessibility validation
+      li Color contrast
+      li WAI-ARIA Landmarks
+
+    h2 Security
+    ul
+      li Follow best practices
+      li Cross-site scripting
+      li Cross-site request forgery
+      li Secure connection (SSL)
+      li HTTP Strict Transport Security
+
+    h2 Social Media
+    ul
+      li Open Graph protocol
+      li Twitter Cards
+      li Facebook Insights
+
+    h2 Misc
+    ul
+      li Add humans.txt
+
+
+
+
+
+
+Quality of code
+Does the site use a correct Doctype?
+Does the site use a Character set?
+Does the site use Valid (X)HTML?
+Does the site use Valid CSS?
+Does the site use any CSS hacks?
+Does the site use unnecessary classes or ids?
+Is the code well structured?
+Does the site have any broken links?
+How does the site perform in terms of speed/page size?
+Does the site have JavaScript errors?
+Degree of separation between content and presentation
+Does the site use CSS for all presentation aspects (fonts, colour, padding, borders etc)?
+Are all decorative images in the CSS, or do they appear in the (X)HTML?
+
+Accessibility for users
+Are “alt” attributes used for all descriptive images?
+Does the site use relative units rather than absolute units for text size?
+Do any aspects of the layout break if font size is increased?
+Does the site use visible skip menus?
+Does the site use accessible forms?
+Does the site use accessible tables?
+Is there sufficient colour brightness/contrasts?
+Is colour alone used for critical information?
+Is there delayed responsiveness for dropdown menus (for users with reduced motor skills)?
+Are all links descriptive (for blind users)?
+
+Accessibility for devices
+Does the site work acceptably across modern and older browsers?
+Is the content accessible with CSS switched off or not supported?
+Is the content accessible with images switched off or not supported?
+Does the site work in text browsers such as Lynx?
+Does the site work well when printed?
+Does the site work well in Hand Held devices?
+Does the site include detailed metadata?
+Does the site work well in a range of browser window sizes?
+
+Basic Usability
+Is there a clear visual hierarchy?
+Are heading levels easy to distinguish?
+Is the site’s navigation easy to understand?
+Is the site’s navigation consistent?
+Does the site use consistent and appropriate language?
+Does the site have a sitemap page and contact page? Are they easy to find?
+For large sites, is there a search tool?
+Is there a link to the home page on every page in the site?
+Are links underlined?
+Are visited links clearly defined?
+
+Site management
+Does the site have a meaningful and helpful 404 error page that works from any depth in the site?
+Does the site use friendly URLs?
+Do your URLs work without “www”?
+Does the site have a favicon?
+
+
+
+
+Content and Style
+Typography and layout   
+Check for incorrect punctuation marks, particularly apostrophes, quotation marks and hyphens/dashes 
+Check headings for where you could potentially use ligatures    
+Check for widow/orphan terms in important paragraphs    
+Spelling and grammar    
+Consistency 
+Capitalisation (especially of main headings)    
+Tense/Style of writing  
+Recurring/common phrases (e.g. ‘More about X’ links)    
+Variations in words (e.g. Websites vs Web Sites, or UK vs US spelling)  
+Treatment of bulleted lists (e.g. periods or commas at end of each item)    
+Check for hard-coded links to staging domain (i.e. ensure all links will change to ‘live’ URL/domain when site is launched) 
+Ensure no test content on site  
+Check how important pages (e.g. content items) print    
+For re-designs, ensure important old/existing URLs are redirected to relevant new URLs, if the URL scheme is changing   
+Check all ‘Hidden Copy’ (e.g. alt text, transcriptions, text in JavaScript functions)   
+
+Standards and Validation
+Accessibility   
+HTML validation 
+JavaScript validation   
+CSS validation  
+
+Search Engine Visibility, SEO and Metrics
+Page Titles are important; ensure they make sense and have relevant keywords in them.   
+Create metadata descriptions for important pages.   
+Check for canonical domain issues (e.g. variations in links to http://site.com http://www.site.com http://www.site.com/index.html should be reduced to a single consistent style)   
+Ensure content is marked-up semantically/correctly (<h1>, etc.) 
+Check for target keyword usage in general content   
+Check format (user/search engine friendliness) of URLs  
+Set up Analytics, FeedBurner, and any other packages for measuring ongoing success  
+Create an XML Sitemap   
+Configure Google Webmaster Console and Yahoo! Site Explorer 
+
+Functional Testing
+Check all bespoke/complex functionality 
+Check search functionality (including relevance of results) 
+Check on common variations of browser (Internet Explorer, Firefox, Safari, Chrome etc.), version (6, 7, 2.2, 3.1 etc.) and platform (Windows, OSX, Linux)   
+Check on common variations of Screen Resolution 
+Test all forms (e.g. contact us, blog comments), including anti-spam features, response emails/text, etc.   
+Test without JavaScript, Flash, and other plug-ins  
+Check all external links are valid  
+
+Security/Risk
+Configure backup schedule, and test recovery from backup.   
+Protect any sensitive pages (e.g. administration area)  
+Use robots.txt where necessary  
+Security/Penetration test   
+Turn-off verbose error reporting    
+Check disk space/capacity   
+Set-up email/SMS monitoring/alerts (e.g. for errors, server warnings); consider internal and external monitoring services  
+
+Performance
+Load test   
+Check image optimisation    
+Check and implement caching where necessary 
+Check total page size/download time 
+Minify/compress static (JavaScript/HTML/CSS) files  
+Optimise your CSS: use short image paths; make full-use ‘cascading’ nature of CSS, etc. 
+Check correct database indexing 
+Check configuration at every level (Web server, Database, any other software e.g. Content Management System)    
+Configure server-based logging/measurement tools (e.g. database/web server logging) 
+
+Finishing Touches
+Create custom 404/error pages   
+Create a favicon    
+
+
+
+Post-Launch
+
+Marketing
+Social Marketing: Twitter, LinkedIn, Digg, Facebook, Stumbleupon, etc.  
+Submit to search engines    
+Set-up PPC/Google Adwords where necessary   
+Check formatting of site results in SERPs 
+
+Ongoing
+Monitor and respond to feedback (direct feedback, on Social Media sites, check for chatter through Google, etc.)    
+Check analytics for problems, popular pages etc. and adjust as necessary    
+Update content
+
+
+
+
+
+Error reporting notifications (email and text)
+Transaction logging if necessary
