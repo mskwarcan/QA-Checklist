@@ -20,7 +20,26 @@ html(lang="en")
         label Spelling and grammar
       li
         input(type="checkbox")
-        label Check website in all browsers
+        label Check website in all browsers &amp; devices
+        ul
+          li
+            input(type="checkbox")
+            label Chrome (PC and Mac)
+          li
+            input(type="checkbox")
+            label Firefox (PC and Mac)
+          li
+            input(type="checkbox")
+            label Safari (PC and Mac)
+          li
+            input(type="checkbox")
+            label IE 7-10 (PC)
+          li
+            input(type="checkbox")
+            label iPhone &amp; Android Phone
+          li
+            input(type="checkbox")
+            label iPad
       li
         input(type="checkbox")
         label Remove 'www' subdomain
@@ -71,16 +90,10 @@ html(lang="en")
         label Optimize HTTP headers
       li
         input(type="checkbox")
-        label Optimize images
+        label Optimize images   
       li
         input(type="checkbox")
-        label Check image optimisation    
-      li
-        input(type="checkbox")
-        label Check and implement caching where necessary 
-      li
-        input(type="checkbox")
-        label Check total page size/download time 
+        label Check and implement caching where necessary
       li
         input(type="checkbox")
         label Minify/compress static (JavaScript/HTML/CSS) files  
@@ -89,10 +102,7 @@ html(lang="en")
         label Optimise your CSS: use short image paths; make full-use ‘cascading’ nature of CSS, etc. 
       li
         input(type="checkbox")
-        label Check correct database indexing 
-      li
-        input(type="checkbox")
-        label Check configuration at every level (Web server, Database, any other software e.g. Content Management System)    
+        label Check correct database indexing
       li
         input(type="checkbox")
         label Configure server-based logging/measurement tools (e.g. database/web server logging) 
@@ -107,16 +117,10 @@ html(lang="en")
         label Custom 404 page
       li
         input(type="checkbox")
-        label Favicon
-      li
-        input(type="checkbox")
         label Use friendly URLs
       li
         input(type="checkbox")
         label Add search feature
-      li
-        input(type="checkbox")
-        label Environment Integration
       li
         input(type="checkbox")
         label Is there a clear visual hierarchy?
@@ -135,9 +139,6 @@ html(lang="en")
       li
         input(type="checkbox")
         label Does the site have a sitemap page and contact page? Are they easy to find?
-      li
-        input(type="checkbox")
-        label For large sites, is there a search tool?
       li
         input(type="checkbox")
         label Is there a link to the home page on every page in the site?
@@ -188,13 +189,7 @@ html(lang="en")
         label Check for target keyword usage in general content   
       li
         input(type="checkbox")
-        label Check format (user/search engine friendliness) of URLs  
-      li
-        input(type="checkbox")
-        label Set up Analytics, FeedBurner, and any other packages for measuring ongoing success  
-      li
-        input(type="checkbox")
-        label Create an XML Sitemap   
+        label Check format (user/search engine friendliness) of URLs
       li
         input(type="checkbox")
         label Configure Google Webmaster Console and Yahoo! Site Explorer 
@@ -224,12 +219,6 @@ html(lang="en")
         label Does the site use a Character set?
       li
         input(type="checkbox")
-        label Does the site use Valid (X)HTML?
-      li
-        input(type="checkbox")
-        label Does the site use Valid CSS?
-      li
-        input(type="checkbox")
         label Does the site use any CSS hacks?
       li
         input(type="checkbox")
@@ -242,9 +231,6 @@ html(lang="en")
         label Does the site have any broken links?
       li
         input(type="checkbox")
-        label How does the site perform in terms of speed/page size?
-      li
-        input(type="checkbox")
         label Does the site have JavaScript errors?
       li
         input(type="checkbox")
@@ -255,6 +241,9 @@ html(lang="en")
       li
         input(type="checkbox")
         label Are all decorative images in the CSS, or do they appear in the (X)HTML?
+      li
+        input(type="checkbox")
+        label Are sprites being used?
 
     h2 World ready
     ul
@@ -263,22 +252,22 @@ html(lang="en")
         label Check all bespoke/complex functionality 
       li
         input(type="checkbox")
-        label Check search functionality (including relevance of results) 
-      li
-        input(type="checkbox")
-        label Check on common variations of browser (Internet Explorer, Firefox, Safari, Chrome etc.), version (6, 7, 2.2, 3.1 etc.) and platform (Windows, OSX, Linux)   
+        label Check search functionality (including relevance of results)  
       li
         input(type="checkbox")
         label Check on common variations of Screen Resolution 
       li
         input(type="checkbox")
-        label Test all forms (e.g. contact us, blog comments), including anti-spam features, response emails/text, etc.   
+        label Test all forms (e.g. contact us, blog comments), including anti-spam features, response emails/text, etc.
       li
         input(type="checkbox")
         label Test without JavaScript, Flash, and other plug-ins  
       li
         input(type="checkbox")
-        label Check all external links are valid  
+        label Check all external links are valid   
+      li
+        input(type="checkbox")
+        label Are 301 redirects in place?
 
     h2 Accessibility
     ul
@@ -287,25 +276,13 @@ html(lang="en")
         label Accessibility validation
       li
         input(type="checkbox")
-        label Color contrast
-      li
-        input(type="checkbox")
         label WAI-ARIA LandmarksAre “alt” attributes used for all descriptive images?
       li
         input(type="checkbox")
-        label Does the site use relative units rather than absolute units for text size?
-      li
-        input(type="checkbox")
-        label Do any aspects of the layout break if font size is increased?
-      li
-        input(type="checkbox")
-        label Does the site use visible skip menus?
+        label Do any aspects of the layout break if font size is increased? (remember, users can control and override the CSS)
       li
         input(type="checkbox")
         label Does the site use accessible forms?
-      li
-        input(type="checkbox")
-        label Does the site use accessible tables?
       li
         input(type="checkbox")
         label Is there sufficient colour brightness/contrasts?
@@ -320,34 +297,19 @@ html(lang="en")
         label Are all links descriptive (for blind users)?
       li
         input(type="checkbox")
-        label Does the site work acceptably across modern and older browsers?
-      li
-        input(type="checkbox")
         label Is the content accessible with CSS switched off or not supported?
       li
         input(type="checkbox")
         label Is the content accessible with images switched off or not supported?
       li
         input(type="checkbox")
-        label Does the site work in text browsers such as Lynx?
-      li
-        input(type="checkbox")
         label Does the site work well when printed?
-      li
-        input(type="checkbox")
-        label Does the site work well in Hand Held devices?
-      li
-        input(type="checkbox")
-        label Does the site include detailed metadata?
-      li
-        input(type="checkbox")
-        label Does the site work well in a range of browser window sizes?
 
     h2 Security
     ul
       li
         input(type="checkbox")
-        label Follow best practices
+        label Follow best practices (e.g. salting and hasing passwords)
       li
         input(type="checkbox")
         label Cross-site scripting
@@ -359,13 +321,13 @@ html(lang="en")
         label Secure connection (SSL)
       li
         input(type="checkbox")
-        label HTTP Strict Transport Security
-      li
-        input(type="checkbox")
         label Configure backup schedule, and test recovery from backup.   
       li
         input(type="checkbox")
-        label Protect any sensitive pages (e.g. administration area)  
+        label Protect any sensitive pages (e.g. administration area)    
+      li
+        input(type="checkbox")
+        label Is ACL properly configured?
       li
         input(type="checkbox")
         label Use robots.txt where necessary  
@@ -383,10 +345,10 @@ html(lang="en")
         label Set-up email/SMS monitoring/alerts (e.g. for errors, server warnings); consider internal and external monitoring services 
       li
         input(type="checkbox")
-        label Error reporting notifications (email and text)
+        label Transaction logging if necessary
       li
         input(type="checkbox")
-        label Transaction logging if necessary
+        label Is spam prevention in place (e.g. honeypot)
 
     h2 Social Media
     ul
@@ -412,7 +374,7 @@ html(lang="en")
         input(type="checkbox")
         label Check formatting of site results in SERPs 
 
-    h2 Content &amp; Style
+    h2 Content, Consistency &amp; Style
     ul
       li
         input(type="checkbox")
@@ -437,16 +399,13 @@ html(lang="en")
         label Treatment of bulleted lists (e.g. periods or commas at end of each item)    
       li
         input(type="checkbox")
-        label Check for hard-coded links to staging domain (i.e. ensure all links will change to ‘live’ URL/domain when site is launched) 
+        label Check for hard-coded links, images, etc to staging domain (i.e. ensure all links will change to ‘live’ URL/domain when site is launched) 
       li
         input(type="checkbox")
         label Ensure no test content on site  
       li
         input(type="checkbox")
-        label Check how important pages (e.g. content items) print    
-      li
-        input(type="checkbox")
-        label For re-designs, ensure important old/existing URLs are redirected to relevant new URLs, if the URL scheme is changing   
+        label Check how important pages (e.g. content items) print 
       li
         input(type="checkbox")
         label Check all ‘Hidden Copy’ (e.g. alt text, transcriptions, text in JavaScript functions) 
