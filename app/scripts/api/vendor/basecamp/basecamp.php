@@ -65,7 +65,7 @@ function basecamp_api_client($appName, $contactInfo, $accountId, $username,
                                                 'shops_token'), 1));
         }
 
-        return json_decode($response);
+        return $response;
     };
 }
 
