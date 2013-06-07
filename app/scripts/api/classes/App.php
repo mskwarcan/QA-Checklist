@@ -7,7 +7,8 @@ class App {
     public function __construct()
     {
         //get our database and core configs and startup & hold onto the objects
-        require_once('config/config.php');
+        require_once('config/Config.php');
+        require_once('config/Debugger.php');
         require_once('vendor/basecamp/basecamp.php');
 
         //grab hold of our configs

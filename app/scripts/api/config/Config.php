@@ -1,5 +1,8 @@
 <?php
 class Config {
+    //app settings
+    public $debug = true;
+    //basecamp settings
     public $appName = 'QAIntegration';
     public $appContact = 'ryan.benson@digitalthrive.com';
     public $basecampAccountId = '1786889';
