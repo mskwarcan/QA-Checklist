@@ -1,5 +1,5 @@
 <?php
-class Init {
+class App {
     //our holders for configs
     public $config;
     public $basecamp;
