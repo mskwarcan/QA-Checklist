@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteEngine On
+#RewriteRule (.*)$ /scripts/api/index.php?action=$1 [L]
+RewriteRule (.+)$ index.php?$1   [L]
