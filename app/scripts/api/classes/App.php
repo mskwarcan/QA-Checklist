@@ -1,24 +1,29 @@
 <?php
 class App {
     //our holders for configs
-    public $config;
+    public $Config;
+    public $Debugger;
 
     //let's start this party
     public function __construct()
     {
         //get our database and core configs and startup & hold onto the objects
         require_once('config/Config.php');
-        require_once('config/Debugger.php');
+        require_once('classes/Debugger.php');
         require_once('vendor/basecamp/basecamp.php');
 
         //grab hold of our configs
-        $this->config = new Config;
+        $this->Config = new Config;
+        $this->Debugger = new Debugger;
+        if($this->Config->debug === true) {
+            $this->Debugger->enableDebugMode();
+        }
     }
 
     public function getProjects()
     {
-        $basecamp = basecamp_api_client($this->config->appName, $this->config->appContact,
-            $this->config->basecampAccountId, $this->config->basecampUsername, $this->config->basecampPassword);
+        $basecamp = basecamp_api_client($this->Config->appName, $this->Config->appContact,
+            $this->Config->basecampAccountId, $this->Config->basecampUsername, $this->Config->basecampPassword);
         try {
             /**
              * Get a list of all projects:
