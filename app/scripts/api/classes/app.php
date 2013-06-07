@@ -2,7 +2,6 @@
 class App {
     //our holders for configs
     public $config;
-    public $basecamp;
 
     //let's start this party
     public function __construct()
@@ -12,9 +11,35 @@ class App {
         require_once('vendor/basecamp/basecamp.php');
 
         //grab hold of our configs
-        $config = new Config;
-        $basecamp = basecamp_api_client($config->appName, $config->appContact,
-            $config->basecampAccountId, $config->basecampUsername, $config->basecampPassword);
+        $this->config = new Config;
+    }
+
+    public function getProjects()
+    {
+        $basecamp = basecamp_api_client($this->config->appName, $this->config->appContact,
+            $this->config->basecampAccountId, $this->config->basecampUsername, $this->config->basecampPassword);
+        try {
+            /**
+             * Get a list of all projects:
+             */
+            $projects = $basecamp('GET', '/projects.json');
+            echo "Current list of projects:\n";
+            foreach ($projects as $project) {
+                echo "\t".$project->name."\n";
+            }
+
+            /**
+             * Create a new project:
+             * $project = array(
+             *     'name' => 'My new project!',
+             * );
+             * 
+             * $newProject = $basecamp('POST', '/projects.json', $project);
+             * echo "New project ID is {$newProject->id}\n";
+             */
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 }
 ?>
