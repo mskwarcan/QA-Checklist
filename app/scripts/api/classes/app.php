@@ -13,8 +13,8 @@ class App {
 
         //grab hold of our configs
         $config = new Config;
-        $basecamp = basecamp_api_client($config->appName, $$config->appContact,
-            $$config->basecampAccountId, $$config->basecampUsername, $$config->basecampPassword);
+        $basecamp = basecamp_api_client($config->appName, $config->appContact,
+            $config->basecampAccountId, $config->basecampUsername, $config->basecampPassword);
     }
 }
 ?>
