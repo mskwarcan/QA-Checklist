@@ -1,13 +1,7 @@
 QA-Checklist
 ============
 
-Dynamic and project-based checklist for quality assurance
-
-Whenever you want to build your project you need to:
-
-~ cd app
-
-~ build/build.sh
+Dynamic and project-based checklist for quality assurance. Going to have to roll PHP since Basecamp won't allow us to use AJAX to send requests easily.
 
 To Do:
 ============

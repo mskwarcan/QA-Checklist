@@ -6,9 +6,10 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link href="/styles/app.css" media="all" rel="stylesheet" />
   </head>
 
   <body>
-     <script data-main="scripts/main" src="scripts/vendor/requirejs/require.js"></script>
+    <h1>Quality Assuance Generator</h1>
   </body>
 </html>
