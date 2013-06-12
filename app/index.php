@@ -8,7 +8,7 @@ require_once('views/layouts/header.php');
 ?>
 
       <h2>Select Account Executive</h2>
-      <div id="people" class="many">
+      <div id="people" class="single">
         <table border="0">
           <tr>
             <?php foreach($accountExecs as $person): ?>
