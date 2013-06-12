@@ -22,11 +22,11 @@ $accountExecs = $app->getPeople('accountexecutives');
     <div id="container">
       <h1>Quality Assuance Generator</h1>
       <h2>Select Account Executive</h2>
-      <div id="people">
+      <div id="people" class="single">
         <table border="0">
           <tr>
             <?php foreach($accountExecs as $person): ?>
-            <td class="person">
+            <td class="person" id="<?php echo $person['id']; ?>">
                 <a href="#">
                   <span class="circle" style="background-image: url(<?php echo $person['avatar']; ?>);"></span>
                   <span><?php echo $person['name']; ?></span>
