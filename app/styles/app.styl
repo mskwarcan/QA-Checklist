@@ -8,6 +8,7 @@ colorLight = #CCA18E
 colorHighlight = #168A83
 colorWhite = #FFF
 colorAccent = #820132
+colorDisabled = #BBB
 
 @import "reset"
 
@@ -16,7 +17,7 @@ html, body
   font-family Helvetica, Arial, sans-serif
   padding 40px 0
 h1, h2
-  font-family: 'Raleway', sans-serif;
+  font-family 'Raleway', sans-serif
   text-align center
 h1
   color colorWhite
@@ -42,7 +43,7 @@ input[type="text"]
 .person:hover .circle, .person.active .circle
   border 3px solid colorWhite
 .circle
-  border-radius(30px)
+  border-radius 30px
   border 3px solid colorBackground
   width 55px
   height 55px
@@ -55,3 +56,17 @@ input[type="text"]
   display block
 .person:hover span, .person.active span
   color colorWhite
+form
+  text-align center
+  margin 80px auto 0
+#submit
+  border none
+  border-radius 8px
+  background-color colorHighlight
+  font-family 'Raleway', sans-serif
+  color colorWhite
+  font-size 24px
+  padding 10px 30px
+#submit[disabled="disabled"]
+  background-color colorDisabled
+  color darken(colorDisabled, 30%)

@@ -171,3 +171,22 @@ input[type="text"] {
 .person.active span {
   color: #fff;
 }
+form {
+  text-align: center;
+  margin: 80px auto 0;
+}
+#submit {
+  border: none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #168a83;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 30px;
+}
+#submit[disabled="disabled"] {
+  background-color: #bbb;
+  color: #838383;
+}
