@@ -3,6 +3,7 @@ class App {
     //our holders for configs
     public $Config;
     public $Debugger;
+    public $Cache;
     //app variables
     public $httpMode;
 
@@ -11,38 +12,35 @@ class App {
     {
         //get our database and core configs and startup & hold onto the objects
         require_once('api/config/Config.php');
+        require_once('api/config/Cache.php');
         require_once('api/classes/Debugger.php');
         require_once('api/vendor/basecamp/basecamp.php');
 
         //grab hold of our configs
         $this->Config = new Config;
+        $this->Cache = new Cache;
         $this->Debugger = new Debugger;
 
         //enable debug mode if necessary
         if($this->Config->debug === true) {
             $this->Debugger->enableDebugMode();
         }
-        echo 'fjsdla';
-        //start the app
-        $this->start();
     }
 
-    public function start()
+    public function run($httpMode, $method)
     {
         //get the request mode
-        $this->httpMode = $_SERVER['REQUEST_METHOD'];
-        echo $this->httpMode;
+        $this->httpMode = $httpMode;
 
         //setup the basecamp api
         $basecamp = basecamp_api_client($this->Config->appName, $this->Config->appContact,
             $this->Config->basecampAccountId, $this->Config->basecampUsername, $this->Config->basecampPassword);
-
         //try what we need to do
         try {
             /**
              * Get a list of all projects:
              */
-            $projects = $basecamp($this->httpMode, '/' . $_SERVER['REDIRECT_QUERY_STRING']);
+            $projects = $basecamp($this->httpMode, '/' . $method);
             echo $projects;
 
             /**
@@ -59,6 +57,10 @@ class App {
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    }
+
+    public function getPeople($group) {
+        return $this->Cache->get($group);
     }
 }
 ?>
