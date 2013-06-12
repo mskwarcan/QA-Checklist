@@ -110,10 +110,13 @@ a img {
 html,
 body {
   background-color: #292930;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 40px 0;
 }
 h1,
 h2 {
   font-family: 'Raleway', sans-serif;
+  text-align: center;
 }
 h1 {
   color: #fff;
@@ -123,6 +126,35 @@ h2 {
   color: #8d8d9e;
   font-size: 36px;
 }
+a {
+  text-decoration: none;
+}
 input[type="text"] {
   background-color: #3c3c47;
+}
+#people {
+  margin-top: 40px;
+}
+#people table {
+  text-align: center;
+  margin: 0 auto;
+}
+.person {
+  padding: 10px;
+  text-align: center;
+}
+.circle {
+  -webkit-border-radius: 27px;
+  -moz-border-radius: 27px;
+  border-radius: 27px;
+  width: 55px;
+  height: 55px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+.person span {
+  color: #fff;
+  display: block;
 }

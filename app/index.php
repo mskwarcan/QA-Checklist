@@ -1,8 +1,7 @@
 <?php
-        error_reporting(E_ALL);
-        ini_set('display_errors', 'on');
 require('api/classes/App.php');
 $app = new App;
+$accountExecs = $app->getPeople('accountexecutives');
 ?>
 
 <!DOCTYPE html>
@@ -18,10 +17,21 @@ $app = new App;
   </head>
 
   <body>
-    <h1>Quality Assuance Generator</h1>
-    <h2>Select Account Executive</h2>
-    <form method="post">
-    
-    </form>
+    <div id="container">
+      <h1>Quality Assuance Generator</h1>
+      <h2>Select Account Executive</h2>
+      <div id="people">
+        <table border="0">
+          <tr>
+          <?php foreach($accountExecs as $person): ?>
+            <td class="person">
+                <span class="circle" style="background-image: url(<?php echo $person['avatar']; ?>);"></span>
+                <span><?php echo $person['name']; ?></span>
+            </td>
+          <?php endforeach; ?>
+          </tr>
+        </table>
+      </div>
+    </div>
   </body>
 </html>
