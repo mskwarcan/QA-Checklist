@@ -23,7 +23,7 @@ require_once('views/layouts/header.php');
         </table>
       </div>
       <form method="post">
-        <input type="hidden" name="people_accountexecutives" id="people_accountexecutives" value="" />
+        <input type="hidden" name="people_accountexecutives" id="peopleList" value="" />
         <input type="submit" name="submit" id="submit" value="Continue" />
       </form>
 

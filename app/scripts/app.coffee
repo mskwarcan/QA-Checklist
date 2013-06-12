@@ -26,6 +26,9 @@ enableButton = ->
         changeButton 'disable'
     return
 
+setHiddenValue = ->
+    $('#peopleList').val JSON.stringify(people)
+
 getHowManyPeopleAvailable = ->
     howMany = $('#people').attr 'class'
     return
@@ -41,6 +44,7 @@ addToSelection = (id) ->
     else
         people.push id
     enableButton()
+    setHiddenValue()
     return
 
 removePerson = (obj) ->
@@ -48,6 +52,7 @@ removePerson = (obj) ->
     index = people.indexOf obj.attr 'id'
     people.splice index, 1
     enableButton()
+    setHiddenValue()
     return
 
 setPerson = (obj) ->
