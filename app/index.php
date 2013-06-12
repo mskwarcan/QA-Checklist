@@ -8,7 +8,7 @@ require_once('views/layouts/header.php');
 ?>
 
       <h2>Select Account Executive</h2>
-      <div id="people" class="single">
+      <div id="people" class="many">
         <table border="0">
           <tr>
             <?php foreach($accountExecs as $person): ?>
@@ -22,6 +22,10 @@ require_once('views/layouts/header.php');
           </tr>
         </table>
       </div>
+      <form method="post">
+        <input type="hidden" name="people_accountexecutives" id="people_accountexecutives" value="" />
+        <input type="submit" name="submit" id="submit" value="Continue" />
+      </form>
 
 <?php
 //finish the template
