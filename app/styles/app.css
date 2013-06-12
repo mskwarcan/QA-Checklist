@@ -111,6 +111,18 @@ html,
 body {
   background-color: #292930;
 }
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
 h1 {
   color: #fff;
+  font-size: 60px;
+}
+h2 {
+  color: #8d8d9e;
+  font-size: 36px;
+}
+input[type="text"] {
+  background-color: #3c3c47;
 }
