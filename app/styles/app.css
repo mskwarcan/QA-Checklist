@@ -143,10 +143,19 @@ input[type="text"] {
   padding: 10px;
   text-align: center;
 }
+.person:hover,
+.person.active {
+  cursor: pointer;
+}
+.person:hover .circle,
+.person.active .circle {
+  border: 3px solid #fff;
+}
 .circle {
-  -webkit-border-radius: 27px;
-  -moz-border-radius: 27px;
-  border-radius: 27px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border: 3px solid #292930;
   width: 55px;
   height: 55px;
   background-repeat: no-repeat;
@@ -155,6 +164,10 @@ input[type="text"] {
   margin: 0 auto 10px;
 }
 .person span {
-  color: #fff;
+  color: #999;
   display: block;
+}
+.person:hover span,
+.person.active span {
+  color: #fff;
 }

@@ -1,3 +1,8 @@
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
 colorBackground = #292930
 colorLight = #CCA18E
 colorHighlight = #168A83
@@ -32,10 +37,13 @@ input[type="text"]
 .person
   padding 10px
   text-align center
+.person:hover, .person.active
+  cursor pointer
+.person:hover .circle, .person.active .circle
+  border 3px solid colorWhite
 .circle
-  -webkit-border-radius 27px
-  -moz-border-radius 27px
-  border-radius 27px
+  border-radius(30px)
+  border 3px solid colorBackground
   width 55px
   height 55px
   background-repeat no-repeat
@@ -43,5 +51,7 @@ input[type="text"]
   text-align center
   margin 0 auto 10px
 .person span
-  color colorWhite
+  color darken(colorWhite, 40%)
   display block
+.person:hover span, .person.active span
+  color colorWhite

@@ -14,6 +14,8 @@ $accountExecs = $app->getPeople('accountexecutives');
     <meta name="viewport" content="width=device-width">
     <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
     <link href="/styles/app.css" media="all" rel="stylesheet" />
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/scripts/app.js"></script>
   </head>
 
   <body>
@@ -23,12 +25,14 @@ $accountExecs = $app->getPeople('accountexecutives');
       <div id="people">
         <table border="0">
           <tr>
-          <?php foreach($accountExecs as $person): ?>
+            <?php foreach($accountExecs as $person): ?>
             <td class="person">
-                <span class="circle" style="background-image: url(<?php echo $person['avatar']; ?>);"></span>
-                <span><?php echo $person['name']; ?></span>
+                <a href="#">
+                  <span class="circle" style="background-image: url(<?php echo $person['avatar']; ?>);"></span>
+                  <span><?php echo $person['name']; ?></span>
+                </a>
             </td>
-          <?php endforeach; ?>
+            <?php endforeach; ?>
           </tr>
         </table>
       </div>
