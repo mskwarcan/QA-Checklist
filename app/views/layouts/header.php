@@ -9,6 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
     <link href="/styles/app.css" media="all" rel="stylesheet" />
     <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/json/json2.js"></script>
     <script src="/scripts/app.js"></script>
   </head>
 
