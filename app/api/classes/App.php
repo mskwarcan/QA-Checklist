@@ -10,7 +10,7 @@ class App {
     public $httpMode;
 
     //let's start this party
-    public function __construct($includeJs = true)
+    public function __construct()
     {
         //get our database and core configs and startup & hold onto the objects
         require_once('api/config/Config.php');
@@ -25,7 +25,7 @@ class App {
         $this->Cache = new Cache;
         $this->Debugger = new Debugger;
         $this->Session = new SessionHander;
-        $this->Layout = new Layout($includeJs);
+        $this->Layout = new Layout;
 
         //enable debug mode if necessary
         if($this->Config->debug === true) {
