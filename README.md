@@ -6,7 +6,6 @@ Dynamic and project-based checklist for quality assurance. Going to have to roll
 To Do:
 ============
 * Make it project-based
-* Make a simple UI to build the QA chunks you want
 * Save the data to a database
 * Be able to login and manage projects
 * Be able to see progress on the QA
