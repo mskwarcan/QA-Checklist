@@ -44,11 +44,10 @@ class App {
         //try what we need to do
         try {
             /**
-             * Get a list of all projects:
+             * process request
              */
-            $projects = $basecamp($this->httpMode, '/' . $method);
-            echo $projects;
-
+            $data = $basecamp($this->httpMode, '/' . $method);
+            return $data;
             /**
              * Create a new project:
              * $project = array(
