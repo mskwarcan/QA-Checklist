@@ -6,7 +6,7 @@ $projectsizes = $app->getPeople('projectsize');
 if(isset($_POST['submit'])) {
   if(isset($_POST['projectsize'])) {
     $app->Session->set('projectsize', $_POST['projectsize']);
-    $app->redirect('review.php');
+    $app->redirect('project.php');
   }
 }
 
