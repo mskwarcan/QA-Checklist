@@ -3,6 +3,13 @@ require('api/classes/App.php');
 $app = new App;
 $accountExecs = $app->getPeople('accountexecutives');
 
+if(isset($_POST['submit'])) {
+  if(isset($_POST['people_accountexecutives'])) {
+    $app->Session->set('people_accountexecutives', $_POST['people_accountexecutives']);
+    $app->redirect('managers.php');
+  }
+}
+
 //pull in the template
 require_once('views/layouts/header.php');
 ?>
