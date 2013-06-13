@@ -19,7 +19,6 @@ changeButton = (state) ->
     return
 
 enableButton = ->
-    console.log people.length
     if people.length >= 1
         changeButton 'enable'
     else
