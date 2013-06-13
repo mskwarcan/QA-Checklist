@@ -78,7 +78,7 @@ class Cache
   private $projectSizeSmall = array(
       'id' => '1',
       'name' => 'Small Size',
-      'desc' => 'Peter Collora, Summit Casing',
+      'desc' => 'Peter Collora<br>Summit Casing',
       'avatar' => 'http://dge9rmgqjs8m1.cloudfront.net/global/a4e2a4bc9771f79b92f41bbce22940c0220a8b6742e86d763c690bbc4e7271418958f84780fa75fc09432e90675369722224df8a0182e9f30e6406fa1a39094904a25df5415c4a43f131a856bc427934/avatar.gif?r=3'
     );
   private $projectSizeMedium = array(
@@ -90,7 +90,7 @@ class Cache
   private $projectSizeLarge = array(
       'id' => '3',
       'name' => 'Large Size',
-      'desc' => 'TAYE, Traffix',
+      'desc' => 'TAYE<br>Traffix',
       'avatar' => 'http://dge9rmgqjs8m1.cloudfront.net/global/a4e2a4bc9771f79b92f41bbce22940c0220a8b6742e86d763c690bbc4e7271418958f84780fa75fc09432e90675369722224df8a0182e9f30e6406fa1a39094904a25df5415c4a43f131a856bc427934/avatar.gif?r=3'
     );
   //app variables
