@@ -71,5 +71,25 @@ class App {
         header('Location: ' . $url);
         die();
     }
+
+    public function getProjectData()
+    {
+        $accountExecs = json_decode($this->Session->get('people_accountexecutives'), true);
+        $projectManagers = json_decode($this->Session->get('people_projectmanagers'), true);
+        $seniorDeveloper = json_decode($this->Session->get('people_seniordeveloper'), true);
+        $developers = json_decode($this->Session->get('people_developers'), true);
+        $proejctSize = json_decode($this->Session->get('projectsize'), true);
+
+        //get the user data back from the IDs
+        $returnArray = array(
+            'people_accountexecutives' => $this->Cache->getPerson($accountExecs),
+            'people_projectmanagers' => $this->Cache->getPerson($projectManagers),
+            'people_seniordeveloper' => $this->Cache->getPerson($seniorDeveloper),
+            'people_developers' => $this->Cache->getPeople($developers),
+            'projectSize' => $this->Cache->getProjectSize($proejctSize)
+        );
+
+        return $returnArray;
+    }
 }
 ?>

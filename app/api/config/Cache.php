@@ -76,19 +76,19 @@ class Cache
 
   //project sizes
   private $projectSizeSmall = array(
-      'id' => '1',
+      'id' => '0',
       'name' => 'Small Size',
       'desc' => 'Peter Collora<br>Summit Casing',
       'avatar' => '/images/avatar_projectsize_small.jpg'
     );
   private $projectSizeMedium = array(
-      'id' => '2',
+      'id' => '1',
       'name' => 'Medium Size',
       'desc' => 'Personal Optics<br>Bacon America',
       'avatar' => '/images/avatar_projectsize_medium.jpg'
     );
   private $projectSizeLarge = array(
-      'id' => '3',
+      'id' => '2',
       'name' => 'Large Size',
       'desc' => 'TAYE<br>Traffix',
       'avatar' => '/images/avatar_projectsize_large.jpg'
@@ -121,6 +121,20 @@ class Cache
         $this->personScottParker,
         $this->personStephenRussel
     );
+    $this->groups['everyone'] = array(
+      $this->personAngelaDavis['id'] => $this->personAngelaDavis,
+      $this->personRyanBenson['id'] => $this->personRyanBenson,
+      $this->personMashallahBehbehani['id'] => $this->personMashallahBehbehani,
+      $this->personScottGottreu['id'] => $this->personScottGottreu,
+      $this->personSheenaBandy['id'] => $this->personSheenaBandy,
+      $this->personAngelMarquez['id'] => $this->personAngelMarquez,
+      $this->personBrianHenderson['id'] => $this->personBrianHenderson,
+      $this->personCassidyNewton['id'] => $this->personCassidyNewton,
+      $this->personDanaFairbanks['id'] => $this->personDanaFairbanks,
+      $this->personLaurenGourley['id'] => $this->personLaurenGourley,
+      $this->personScottParker['id'] => $this->personScottParker,
+      $this->personStephenRussel['id'] => $this->personStephenRussel
+    );
     $this->groups['projectsize'] = array(
         $this->projectSizeSmall,
         $this->projectSizeMedium,
@@ -131,6 +145,25 @@ class Cache
   public function get($group)
   {
     return $this->groups[$group];
+  }
+
+  public function getPerson($personId)
+  {
+    return $this->groups['everyone'][$personId];
+  }
+
+  public function getPeople($idArray)
+  {
+    $people = [];
+    foreach($idArray as $id) {
+      $people[] = $this->getPerson($id);
+    }
+    return $people;
+  }
+
+  public function getProjectSize($size)
+  {
+    return $this->groups['projectsize'][$size];
   }
 
 }
