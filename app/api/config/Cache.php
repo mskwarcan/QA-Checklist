@@ -147,16 +147,23 @@ class Cache
     return $this->groups[$group];
   }
 
-  public function getPerson($personId)
+  public function getPerson($personId, $wrap = true)
   {
-    return array($this->groups['everyone'][$personId]);
+    $person = $this->groups['everyone'][$personId];
+    //we might want to wrap it in an array object, but only if we need to
+    if($wrap === true) {
+      return array($person);
+    } else {
+      return $person;
+    }
   }
 
   public function getPeople($idArray)
   {
     $people = [];
     foreach($idArray as $id) {
-      $people[] = $this->getPerson($id);
+      //get the person, but don't wrap it in an array. makes it easier to work with later like this
+      $people[] = $this->getPerson($id, false);
     }
     return $people;
   }
