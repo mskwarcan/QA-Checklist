@@ -19,9 +19,9 @@ $app->Layout->renderHeader();
       <script>
       $(document).ready(function() { $("#e1").select2(); });
       </script>
-      
+
       <h2>Select Project</h2>
-      <form method="post">
+      <form method="post" id="projectSelect">
         <select id="e1">
           <?php foreach($allProjects as $project): ?>
           <option value="<?php echo $project['id']; ?>"><?php echo $project['name']; ?></option>
