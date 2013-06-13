@@ -132,6 +132,9 @@ a {
 input[type="text"] {
   background-color: #3c3c47;
 }
+td {
+  vertical-align: top;
+}
 #people {
   margin-top: 40px;
 }
@@ -170,6 +173,11 @@ input[type="text"] {
 .person:hover span,
 .person.active span {
   color: #fff;
+}
+.person em {
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
 }
 form {
   text-align: center;
