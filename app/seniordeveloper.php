@@ -4,8 +4,8 @@ $app = new App;
 $seniordevelopers = $app->getPeople('developers');
 
 if(isset($_POST['submit'])) {
-  if(isset($_POST['people_developers'])) {
-    $app->Session->set('people_developers', $_POST['people_developers']);
+  if(isset($_POST['people_seniordeveloper'])) {
+    $app->Session->set('people_seniordeveloper', $_POST['people_seniordeveloper']);
     $app->redirect('developers.php');
   }
 }
@@ -30,7 +30,7 @@ require_once('views/layouts/header.php');
         </table>
       </div>
       <form method="post">
-        <input type="hidden" name="people_developers" id="peopleList" value="" />
+        <input type="hidden" name="people_seniordeveloper" id="peopleList" value="" />
         <input type="submit" name="submit" id="submit" value="Continue" />
       </form>
 
