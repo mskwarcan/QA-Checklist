@@ -136,11 +136,35 @@ h3 {
 a {
   text-decoration: none;
 }
+a.btn-small {
+  display: block;
+  width: 110px;
+  text-align: center;
+  margin: 20px auto;
+  border: none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+  color: #292930;
+  font-size: 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+a.btn-small:hover {
+  color: #820132;
+}
 input[type="text"] {
   background-color: #3c3c47;
 }
 td {
   vertical-align: top;
+}
+p {
+  text-align: center;
+  color: #999;
+  margin: 10px 0;
 }
 #people {
   margin-top: 40px;

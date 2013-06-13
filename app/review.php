@@ -101,6 +101,8 @@ $app->Layout->renderHeader(false);
       <form method="post">
         <input type="submit" name="submit" id="submit" value="Create" />
       </form>
+
+      <a href="/index.php" class="btn-small">Start Over?</a>
 <?php
 $app->Layout->renderFooter();
 ?>
