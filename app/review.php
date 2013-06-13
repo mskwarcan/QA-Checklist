@@ -1,12 +1,12 @@
 <?php
+
+        error_reporting(E_ALL);
+        ini_set('display_errors', 'on');
 require('api/classes/App.php');
-$app = new App;
+$app = new App(false);
 
 //get all of our data from session
 $projectData = $app->getProjectData();
-
-//pull in the template
-require_once('views/layouts/header.php');
 ?>
 
       <h2>Project Review</h2>
@@ -97,8 +97,6 @@ require_once('views/layouts/header.php');
       <form method="post">
         <input type="submit" name="submit" id="submit" value="Create" />
       </form>
-
 <?php
-//finish the template
-require_once('views/layouts/footer.php');
+$app->Layout->renderFooter();
 ?>
