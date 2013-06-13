@@ -1,6 +1,7 @@
 <?php
 require('api/classes/App.php');
 $app = new App;
+$app->Sesssion->clearData();
 $accountExecs = $app->getPeople('accountexecutives');
 
 if(isset($_POST['submit'])) {

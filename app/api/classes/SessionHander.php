@@ -17,5 +17,9 @@ class SessionHander {
         return $_SESSION[$key];
     }
 
+    public function clearData()
+    {
+        session_unset();
+    }
 }
 ?>
