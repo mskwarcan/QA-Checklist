@@ -84,7 +84,7 @@ class Cache
   private $projectSizeMedium = array(
       'id' => '2',
       'name' => 'Medium Size',
-      'desc' => 'Personal Optics',
+      'desc' => 'Personal Optics<br>Bacon America',
       'avatar' => '/images/avatar_projectsize_medium.jpg'
     );
   private $projectSizeLarge = array(
