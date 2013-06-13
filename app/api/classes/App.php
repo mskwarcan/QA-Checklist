@@ -1,15 +1,16 @@
 <?php
 class App {
-    //our holders for configs
+    //our holders for configs and classes
     public $Config;
     public $Debugger;
     public $Cache;
     public $Session;
+    public $Layout;
     //app variables
     public $httpMode;
 
     //let's start this party
-    public function __construct()
+    public function __construct($includeJs = true)
     {
         //get our database and core configs and startup & hold onto the objects
         require_once('api/config/Config.php');
@@ -17,12 +18,14 @@ class App {
         require_once('api/classes/Debugger.php');
         require_once('api/vendor/basecamp/basecamp.php');
         require_once('api/classes/SessionHander.php');
+        require_once('api/classes/Layout.php');
 
         //grab hold of our configs
         $this->Config = new Config;
         $this->Cache = new Cache;
         $this->Debugger = new Debugger;
         $this->Session = new SessionHander;
+        $this->Layout = new Layout($includeJs);
 
         //enable debug mode if necessary
         if($this->Config->debug === true) {
