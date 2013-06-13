@@ -4,6 +4,7 @@ class App {
     public $Config;
     public $Debugger;
     public $Cache;
+    public $Session;
     //app variables
     public $httpMode;
 
@@ -15,11 +16,13 @@ class App {
         require_once('api/config/Cache.php');
         require_once('api/classes/Debugger.php');
         require_once('api/vendor/basecamp/basecamp.php');
+        require_once('api/classes/SessionHander.php');
 
         //grab hold of our configs
         $this->Config = new Config;
         $this->Cache = new Cache;
         $this->Debugger = new Debugger;
+        $this->Session = new SessionHander;
 
         //enable debug mode if necessary
         if($this->Config->debug === true) {
