@@ -11,8 +11,8 @@ require_once('views/layouts/header.php');
 
       <h2>Project Review</h2>
 
-      <h3>Account Executive</h3>
       <div id="people">
+        <h3>Account Executive</h3>
         <table border="0">
           <tr>
             <?php foreach($projectData['people_accountexecutives'] as $person): ?>
@@ -27,8 +27,8 @@ require_once('views/layouts/header.php');
         </table>
       </div>
 
-      <h3>Project Manager</h3>
       <div id="people">
+        <h3>Project Manager</h3>
         <table border="0">
           <tr>
             <?php foreach($projectData['people_projectmanagers'] as $person): ?>
@@ -43,8 +43,8 @@ require_once('views/layouts/header.php');
         </table>
       </div>
 
-      <h3>Senior Developer</h3>
       <div id="people">
+        <h3>Senior Developer</h3>
         <table border="0">
           <tr>
             <?php foreach($projectData['people_seniordeveloper'] as $person): ?>
@@ -59,8 +59,8 @@ require_once('views/layouts/header.php');
         </table>
       </div>
 
-      <h3>Developer(s)</h3>
       <div id="people">
+        <h3>Developer(s)</h3>
         <table border="0">
           <tr>
             <?php foreach($projectData['people_developers'] as $person): ?>
@@ -75,8 +75,8 @@ require_once('views/layouts/header.php');
         </table>
       </div>
 
-      <h3>Project Size</h3>
       <div id="people">
+        <h3>Project Size</h3>
         <table border="0">
           <tr>
             <td class="person" id="<?php echo $projectData['projectSize']['id']; ?>">
@@ -95,7 +95,7 @@ require_once('views/layouts/header.php');
 
 
       <form method="post">
-        <input type="submit" name="submit" id="submit" value="Continue" />
+        <input type="submit" name="submit" id="submit" value="Create" />
       </form>
 
 <?php
