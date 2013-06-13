@@ -4,8 +4,8 @@ $app = new App;
 
 //putting this first so we don't have to pull the project data again if we don't need to
 if(isset($_POST['submit'])) {
-  if(isset($_POST['project'])) {
-    $app->Session->set('project', $_POST['project']);
+  if(isset($_POST['projectName'])) {
+    $app->Session->set('projectName', $_POST['projectName']);
     $app->redirect('review.php');
   }
 }
@@ -27,7 +27,7 @@ $app->Layout->renderHeader(false);
 
       <h2>Select Project</h2>
       <form method="post" id="projectSelect">
-        <select name="project" id="e1">
+        <select name="projectName" id="e1">
           <?php foreach($allProjects as $project): ?>
           <option value="<?php echo $project['id']; ?>"><?php echo $project['name']; ?></option>
           <?php endforeach; ?>
