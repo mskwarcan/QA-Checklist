@@ -114,7 +114,8 @@ body {
   padding: 40px 0;
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: 'Raleway', sans-serif;
   text-align: center;
 }
@@ -125,6 +126,12 @@ h1 {
 h2 {
   color: #8d8d9e;
   font-size: 36px;
+}
+h3 {
+  color: #cca18e;
+  font-size: 24px;
+  border-top: 1px solid #3c3c47;
+  padding-top: 40px;
 }
 a {
   text-decoration: none;
