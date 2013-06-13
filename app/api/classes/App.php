@@ -65,5 +65,11 @@ class App {
     public function getPeople($group) {
         return $this->Cache->get($group);
     }
+
+    public function redirect($url)
+    {
+        header('Location: ' . $url);
+        die();
+    }
 }
 ?>
