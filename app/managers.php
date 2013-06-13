@@ -9,6 +9,8 @@ if(isset($_POST['submit'])) {
     $app->redirect('seniordeveloper.php');
   }
 }
+
+$app->Layout->renderHeader();
 ?>
 
       <h2>Select Project Manager</h2>

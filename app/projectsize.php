@@ -9,6 +9,8 @@ if(isset($_POST['submit'])) {
     $app->redirect('review.php');
   }
 }
+
+$app->Layout->renderHeader();
 ?>
 
       <h2>Select Project Size</h2>

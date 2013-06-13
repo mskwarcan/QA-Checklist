@@ -1,10 +1,11 @@
 <?php
 require('api/classes/App.php');
-//tell the app we don't want JS
-$app = new App(false);
+$app = new App;
 
 //get all of our data from session
 $projectData = $app->getProjectData();
+
+$app->Layout->renderHeader(false);
 ?>
 
       <h2>Project Review</h2>

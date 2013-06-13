@@ -9,6 +9,8 @@ if(isset($_POST['submit'])) {
     $app->redirect('developers.php');
   }
 }
+
+$app->Layout->renderHeader();
 ?>
 
       <h2>Select Senior Developer</h2>

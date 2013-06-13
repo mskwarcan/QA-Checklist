@@ -9,6 +9,8 @@ if(isset($_POST['submit'])) {
     $app->redirect('projectsize.php');
   }
 }
+
+$app->Layout->renderHeader();
 ?>
 
       <h2>Select Developer(s)</h2>
