@@ -1,7 +1,7 @@
 <?php
 require('api/classes/App.php');
 $app = new App;
-$accountExecs = $app->getPeople('projectmanagers');
+$projectmanagers = $app->getPeople('projectmanagers');
 
 if(isset($_POST['submit'])) {
   if(isset($_POST['people_projectmanagers'])) {
@@ -18,7 +18,7 @@ require_once('views/layouts/header.php');
       <div id="people" class="single">
         <table border="0">
           <tr>
-            <?php foreach($accountExecs as $person): ?>
+            <?php foreach($projectmanagers as $person): ?>
             <td class="person" id="<?php echo $person['id']; ?>">
                 <a href="#">
                   <span class="circle" style="background-image: url(<?php echo $person['avatar']; ?>);"></span>

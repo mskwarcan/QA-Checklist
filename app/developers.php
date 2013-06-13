@@ -1,7 +1,7 @@
 <?php
 require('api/classes/App.php');
 $app = new App;
-$accountExecs = $app->getPeople('developers');
+$developers = $app->getPeople('developers');
 
 if(isset($_POST['submit'])) {
   if(isset($_POST['people_developers'])) {
@@ -18,7 +18,7 @@ require_once('views/layouts/header.php');
       <div id="people" class="many">
         <table border="0">
           <tr>
-            <?php foreach($accountExecs as $person): ?>
+            <?php foreach($developers as $person): ?>
             <td class="person" id="<?php echo $person['id']; ?>">
                 <a href="#">
                   <span class="circle" style="background-image: url(<?php echo $person['avatar']; ?>);"></span>
