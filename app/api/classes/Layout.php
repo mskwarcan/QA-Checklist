@@ -1,7 +1,7 @@
 <?php
 class Layout
 {
-    public function __construct($includeJs = true)
+    public function renderHeader($includeJs = true)
     {
         require_once('views/layouts/header.php');
     }
