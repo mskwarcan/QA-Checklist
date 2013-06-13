@@ -9,9 +9,6 @@ if(isset($_POST['submit'])) {
     $app->redirect('developers.php');
   }
 }
-
-//pull in the template
-require_once('views/layouts/header.php');
 ?>
 
       <h2>Select Senior Developer</h2>
@@ -35,6 +32,5 @@ require_once('views/layouts/header.php');
       </form>
 
 <?php
-//finish the template
-require_once('views/layouts/footer.php');
+$app->Layout->renderFooter();
 ?>

@@ -1,8 +1,6 @@
 <?php
-
-        error_reporting(E_ALL);
-        ini_set('display_errors', 'on');
 require('api/classes/App.php');
+//tell the app we don't want JS
 $app = new App(false);
 
 //get all of our data from session
