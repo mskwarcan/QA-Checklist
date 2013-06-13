@@ -12,9 +12,10 @@ if(isset($_POST['submit'])) {
   }
 }
 
-$app->Layout->renderHeader();
+$app->Layout->renderHeader(false);
 ?>
       <link href="/vendor/select2/select2.css" rel="stylesheet"/>
+      <script src="/vendor/jquery/jquery.min.js"></script>
       <script src="/vendor/select2/select2.min.js"></script>
       <script>
       $(document).ready(function() { $("#e1").select2(); });
