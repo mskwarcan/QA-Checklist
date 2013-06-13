@@ -149,7 +149,7 @@ class Cache
 
   public function getPerson($personId)
   {
-    return $this->groups['everyone'][$personId];
+    return array($this->groups['everyone'][$personId]);
   }
 
   public function getPeople($idArray)

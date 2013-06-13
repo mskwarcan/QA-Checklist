@@ -15,11 +15,11 @@ require_once('views/layouts/header.php');
 
       <h2>Project Review</h2>
 
-      <h3>Developers</h3>
+      <h3>Account Executive</h3>
       <div id="people">
         <table border="0">
           <tr>
-            <?php foreach($developers as $person): ?>
+            <?php foreach($projectData['people_accountexecutives'] as $person): ?>
             <td class="person" id="<?php echo $person['id']; ?>">
                 <a href="#">
                   <span class="circle" style="background-image: url(<?php echo $person['avatar']; ?>);"></span>
