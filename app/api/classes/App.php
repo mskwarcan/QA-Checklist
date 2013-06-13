@@ -90,7 +90,7 @@ class App {
             'people_seniordeveloper' => $this->Cache->getPerson($seniorDeveloper),
             'people_developers' => $this->Cache->getPeople($developers),
             'projectSize' => $this->Cache->getProjectSize($proejctSize),
-            'projectId' => $this->run('GET', '/projects/' . $projectId . '.json')
+            'projectData' => json_decode($this->run('GET', '/projects/' . $projectId . '.json'), true)
         );
 
         return $returnArray;
