@@ -1,16 +1,20 @@
 <?php
 require('api/classes/App.php');
 $app = new App;
+
+//putting this first so we don't have to pull the project data again if we don't need to
+if(isset($_POST['submit'])) {
+  if(isset($_POST['project'])) {
+    $app->Session->set('project', $_POST['project']);
+    $app->redirect('review.php');
+  }
+}
+
 $allProjects = $app->run('GET', '/projects.json');
 $allProjects = json_decode($allProjects, true);
 
 
-if(isset($_POST['submit'])) {
-  if(isset($_POST['project'])) {
-    $app->Session->set('project', $_POST['project']);
-    $app->redirect('projectsize.php');
-  }
-}
+
 
 $app->Layout->renderHeader(false);
 ?>
@@ -23,7 +27,7 @@ $app->Layout->renderHeader(false);
 
       <h2>Select Project</h2>
       <form method="post" id="projectSelect">
-        <select id="e1">
+        <select name="project" id="e1">
           <?php foreach($allProjects as $project): ?>
           <option value="<?php echo $project['id']; ?>"><?php echo $project['name']; ?></option>
           <?php endforeach; ?>
