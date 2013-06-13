@@ -160,7 +160,7 @@ class Cache
 
   public function getPeople($idArray)
   {
-    $people = [];
+    $people = array();
     foreach($idArray as $id) {
       //get the person, but don't wrap it in an array. makes it easier to work with later like this
       $people[] = $this->getPerson($id, false);
