@@ -103,7 +103,8 @@ class Cache
         $this->personMashallahBehbehani,
         $this->personScottGottreu,
         $this->personSheenaBandy,
-        $this->personAngelMarquez
+        $this->personAngelMarquez,
+        $this->personBrianHenderson
     );
     $this->groups['designers'] = array(
         $this->personRyanBenson,
