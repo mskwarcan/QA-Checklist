@@ -81,7 +81,7 @@ class App {
         $seniorDeveloper = json_decode($this->Session->get('people_seniordeveloper'), true);
         $developers = json_decode($this->Session->get('people_developers'), true);
         $proejctSize = json_decode($this->Session->get('projectsize'), true);
-        $projectName = $this->Session->get('projectName');
+        $projectId = $this->Session->get('projectId');
 
         //get the user data back from the IDs
         $returnArray = array(
@@ -90,7 +90,7 @@ class App {
             'people_seniordeveloper' => $this->Cache->getPerson($seniorDeveloper),
             'people_developers' => $this->Cache->getPeople($developers),
             'projectSize' => $this->Cache->getProjectSize($proejctSize),
-            'projectName' => $projectName
+            'projectId' => $this->run('GET', '/projects/' . $projectId . '.json')
         );
 
         return $returnArray;
