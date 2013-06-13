@@ -92,6 +92,11 @@ $app->Layout->renderHeader(false);
         </table>
       </div>
 
+      <div id="people">
+        <h3>Project Name</h3>
+        <p><?php echo $projectData['projectData']['name']; ?></p>
+      </div>
+
 
       <form method="post">
         <input type="submit" name="submit" id="submit" value="Create" />
