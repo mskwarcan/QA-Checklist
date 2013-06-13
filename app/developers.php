@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
 require_once('views/layouts/header.php');
 ?>
 
-      <h2>Select Account Executive</h2>
+      <h2>Select Developer(s)</h2>
       <div id="people" class="many">
         <table border="0">
           <tr>
