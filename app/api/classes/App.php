@@ -6,6 +6,7 @@ class App {
     public $Cache;
     public $Session;
     public $Layout;
+    public $Tasks;
     //app variables
     public $httpMode;
 
@@ -15,10 +16,11 @@ class App {
         //get our database and core configs and startup & hold onto the objects
         require_once('api/config/Config.php');
         require_once('api/config/Cache.php');
+        require_once('api/config/Tasks.php');
         require_once('api/classes/Debugger.php');
-        require_once('api/vendor/basecamp/basecamp.php');
         require_once('api/classes/SessionHander.php');
         require_once('api/classes/Layout.php');
+        require_once('api/vendor/basecamp/basecamp.php');
 
         //grab hold of our configs
         $this->Config = new Config;
@@ -26,6 +28,7 @@ class App {
         $this->Debugger = new Debugger;
         $this->Session = new SessionHander;
         $this->Layout = new Layout;
+        $this->Tasks = new Tasks;
 
         //enable debug mode if necessary
         if($this->Config->debug === true) {
