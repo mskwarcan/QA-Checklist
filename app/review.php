@@ -5,6 +5,14 @@ $app = new App;
 //get all of our data from session
 $projectData = $app->getProjectData();
 
+//check for post
+if(isset($_POST['submit'])) {
+    $app->grantAccess($projectData);
+    echo "done";
+
+    //$app->redirect('complete.php');
+}
+
 $app->Layout->renderHeader(false);
 ?>
 

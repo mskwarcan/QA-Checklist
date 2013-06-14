@@ -33,7 +33,7 @@ class App {
         }
     }
 
-    public function run($httpMode, $method)
+    public function run($httpMode, $method, $data = false)
     {
         //get the request mode
         $this->httpMode = $httpMode;
@@ -46,7 +46,7 @@ class App {
             /**
              * process request
              */
-            $data = $basecamp($this->httpMode, '/' . $method);
+            $data = $basecamp($this->httpMode, '/' . $method, $data);
             return $data;
             /**
              * Create a new project:
@@ -94,6 +94,28 @@ class App {
         );
 
         return $returnArray;
+    }
+
+    public function grantAccess($data)
+    {
+        $userIdArr = array();
+        foreach($data['people_accountexecutives'] as $person) {
+            $userIdArr[] = $person['id'];
+        }
+        foreach($data['people_projectmanagers'] as $person) {
+            $userIdArr[] = $person['id'];
+        }
+        foreach($data['people_seniordeveloper'] as $person) {
+            $userIdArr[] = $person['id'];
+        }
+        foreach($data['people_developers'] as $person) {
+            $userIdArr[] = $person['id'];
+        }
+        $dataToSend = array(
+            'ids' => $userIdArr
+        );
+        $this->run('POST', '/projects/' . $data['projectData']['id'] . '/accesses.json', $dataToSend);
+        return true;
     }
 }
 ?>
