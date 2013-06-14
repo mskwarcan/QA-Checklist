@@ -96,26 +96,40 @@ class App {
         return $returnArray;
     }
 
-    public function grantAccess($data)
+    public function createLists($projectData)
+    {
+        //first give them access to the project, if they're not already on it
+        $this->grantAccess($projectData);
+        //create the to dos
+        $this->createToDoLists($projectData);
+    }
+
+    private function grantAccess($projectData)
     {
         $userIdArr = array();
-        foreach($data['people_accountexecutives'] as $person) {
+        foreach($projectData['people_accountexecutives'] as $person) {
             $userIdArr[] = $person['id'];
         }
-        foreach($data['people_projectmanagers'] as $person) {
+        foreach($projectData['people_projectmanagers'] as $person) {
             $userIdArr[] = $person['id'];
         }
-        foreach($data['people_seniordeveloper'] as $person) {
+        foreach($projectData['people_seniordeveloper'] as $person) {
             $userIdArr[] = $person['id'];
         }
-        foreach($data['people_developers'] as $person) {
+        foreach($projectData['people_developers'] as $person) {
             $userIdArr[] = $person['id'];
         }
         $dataToSend = array(
             'ids' => $userIdArr
         );
-        $this->run('POST', '/projects/' . $data['projectData']['id'] . '/accesses.json', $dataToSend);
+        $this->run('POST', '/projects/' . $projectData['projectData']['id'] . '/accesses.json', $dataToSend);
         return true;
+    }
+
+    private function createToDoLists($projectData)
+    {
+        // wait for 2 seconds
+        usleep(30000);
     }
 }
 ?>

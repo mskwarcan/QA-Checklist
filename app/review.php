@@ -7,7 +7,7 @@ $projectData = $app->getProjectData();
 
 //check for post
 if(isset($_POST['submit'])) {
-    $app->grantAccess($projectData);
+    $app->createLists($projectData);
     echo "done";
 
     //$app->redirect('complete.php');
