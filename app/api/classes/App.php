@@ -131,8 +131,46 @@ class App {
 
     private function createToDoLists($projectData)
     {
-        // wait for 2 seconds
-        usleep(30000);
+        $proejctId = $projectData['projectData']['id'];
+
+        foreach($projectData['people_accountexecutives'] as $person) {
+            //get the tasks
+            $tasksArr = $this->Tasks->get('accountexecutives');
+            //create to do list for user
+            $listData = $this->createToDoList($person, 'Account Executive', $proejctId);
+        }
+
+        foreach($projectData['people_projectmanagers'] as $person) {
+            //get the tasks
+            $tasksArr = $this->Tasks->get('accountexecutives');
+            //create to do list for user
+            $listData = $this->createToDoList($person, 'Project Manager', $proejctId);
+        }
+
+        foreach($projectData['people_seniordeveloper'] as $person) {
+            //get the tasks
+            $tasksArr = $this->Tasks->get('accountexecutives');
+            //create to do list for user
+            $listData = $this->createToDoList($person, 'Senior Developer', $proejctId);
+        }
+
+        foreach($projectData['people_developers'] as $person) {
+            //get the tasks
+            $tasksArr = $this->Tasks->get('accountexecutives');
+            //create to do list for user
+            $listData = $this->createToDoList($person, 'Developer', $proejctId);
+        }
+
+        //usleep(30000);
+    }
+
+    private function createToDoList($person, $type, $proejctId)
+    {
+        $projectListData = array(
+            "name" => "QA List - " . $person
+        );
+        $toDoListData = $this->run('POST', '/projects/' . $proejctId . '/todolists.json', $projectListData);
+        return $toDoListData;
     }
 }
 ?>
