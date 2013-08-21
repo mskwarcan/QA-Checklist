@@ -140,7 +140,7 @@ class App {
             $listData = $this->createToDoList($person, 'Account Executive', $proejctId);
             $listId = $this->getIdFromJson($listData);
             //finally create the todo items
-            $this->createToDoItems($tasksArr, $listId, $person);
+            $this->createToDoItems($tasksArr, $listId, $person, $proejctId);
         }
 
         foreach($projectData['people_projectmanagers'] as $person) {
@@ -150,7 +150,7 @@ class App {
             $listData = $this->createToDoList($person, 'Project Manager', $proejctId);
             $listId = $this->getIdFromJson($listData);
             //finally create the todo items
-            $this->createToDoItems($tasksArr, $listId, $person);
+            $this->createToDoItems($tasksArr, $listId, $person, $proejctId);
         }
 
         foreach($projectData['people_seniordeveloper'] as $person) {
@@ -160,7 +160,7 @@ class App {
             $listData = $this->createToDoList($person, 'Senior Developer', $proejctId);
             $listId = $this->getIdFromJson($listData);
             //finally create the todo items
-            $this->createToDoItems($tasksArr, $listId, $person);
+            $this->createToDoItems($tasksArr, $listId, $person, $proejctId);
         }
 
         foreach($projectData['people_developers'] as $person) {
@@ -170,7 +170,7 @@ class App {
             $listData = $this->createToDoList($person, 'Developer', $proejctId);
             $listId = $this->getIdFromJson($listData);
             //finally create the todo items
-            $this->createToDoItems($tasksArr, $listId, $person);
+            $this->createToDoItems($tasksArr, $listId, $person, $proejctId);
         }
     }
 
@@ -189,7 +189,7 @@ class App {
         return $id;
     }
 
-    private function createToDoItems($tasksArr, $listId, $person) {
+    private function createToDoItems($tasksArr, $listId, $person, $proejctId) {
         //now that the list has been created, need to make the todos
         foreach($tasksArr as $todoItem) {
             $attrData = array(
