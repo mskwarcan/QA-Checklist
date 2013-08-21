@@ -89,7 +89,7 @@ class Cache
       'id' => '4396446',
       'name' => 'Bill Parmeleee',
       'email' => 'bill.parmelee@warrendouglas.com',
-      'avatar' => 'https://basecamp.com/1786889/people/4396446-bill-parmelee'
+      'avatar' => 'https://rollout-assets.basecamp.com/1786889/people/4396446-bill-parmelee/photo/avatar.96.gif'
     );
 
   //project sizes
