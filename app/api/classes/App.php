@@ -167,7 +167,7 @@ class App {
     private function createToDoList($person, $type, $proejctId)
     {
         $projectListData = array(
-            "name" => "QA List - " . $person
+            "name" => "QA List for " . $type . " - " . $person['name']
         );
         $toDoListData = $this->run('POST', '/projects/' . $proejctId . '/todolists.json', $projectListData);
         return $toDoListData;

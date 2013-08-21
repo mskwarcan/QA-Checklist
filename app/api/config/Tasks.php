@@ -256,7 +256,7 @@ class Tasks
     public function get($what)
     {
         $group = 'tasks_' . $what;
-        return $this->$$group;
+        return $this->$group;
     }
 }
 ?>
