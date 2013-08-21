@@ -138,6 +138,9 @@ class App {
             $tasksArr = $this->Tasks->get('accountexecutives');
             //create to do list for user
             $listData = $this->createToDoList($person, 'Account Executive', $proejctId);
+            $listId = $this->getIdFromJson($listData);
+            //finally create the todo items
+            $this->createToDoItems($tasksArr, $listId, $person);
         }
 
         foreach($projectData['people_projectmanagers'] as $person) {
@@ -145,6 +148,9 @@ class App {
             $tasksArr = $this->Tasks->get('accountexecutives');
             //create to do list for user
             $listData = $this->createToDoList($person, 'Project Manager', $proejctId);
+            $listId = $this->getIdFromJson($listData);
+            //finally create the todo items
+            $this->createToDoItems($tasksArr, $listId, $person);
         }
 
         foreach($projectData['people_seniordeveloper'] as $person) {
@@ -152,6 +158,9 @@ class App {
             $tasksArr = $this->Tasks->get('accountexecutives');
             //create to do list for user
             $listData = $this->createToDoList($person, 'Senior Developer', $proejctId);
+            $listId = $this->getIdFromJson($listData);
+            //finally create the todo items
+            $this->createToDoItems($tasksArr, $listId, $person);
         }
 
         foreach($projectData['people_developers'] as $person) {
@@ -159,9 +168,10 @@ class App {
             $tasksArr = $this->Tasks->get('accountexecutives');
             //create to do list for user
             $listData = $this->createToDoList($person, 'Developer', $proejctId);
+            $listId = $this->getIdFromJson($listData);
+            //finally create the todo items
+            $this->createToDoItems($tasksArr, $listId, $person);
         }
-
-        //usleep(30000);
     }
 
     private function createToDoList($person, $type, $proejctId)
@@ -171,6 +181,27 @@ class App {
         );
         $toDoListData = $this->run('POST', '/projects/' . $proejctId . '/todolists.json', $projectListData);
         return $toDoListData;
+    }
+
+    private function getIdFromJson($jsonData) {
+        $dataArr = json_decode($jsonData, true);
+        $id = $dataArr['id'];
+        return $id;
+    }
+
+    private function createToDoItems($tasksArr, $listId, $person) {
+        //now that the list has been created, need to make the todos
+        foreach($tasksArr as $todoItem) {
+            $attrData = array(
+                'content' => $todoItem,
+                'assignee' => array(
+                                'id'    => $person['id'],
+                                'type'  => 'Person'
+                )
+            );
+            $toDoItemData = $this->run('POST', '/projects/' . $proejctId . '/todolists/' . $listId . '/todos.json', $projectListData);
+        }
+        return true;
     }
 }
 ?>
