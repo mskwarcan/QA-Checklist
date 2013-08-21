@@ -199,7 +199,7 @@ class App {
                                 'type'  => 'Person'
                 )
             );
-            $toDoItemData = $this->run('POST', '/projects/' . $proejctId . '/todolists/' . $listId . '/todos.json', $projectListData);
+            $toDoItemData = $this->run('POST', '/projects/' . $proejctId . '/todolists/' . $listId . '/todos.json', $attrData);
         }
         return true;
     }
