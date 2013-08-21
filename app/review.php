@@ -8,9 +8,7 @@ $projectData = $app->getProjectData();
 //check for post
 if(isset($_POST['submit'])) {
     $app->createLists($projectData);
-    echo "done";
-
-    //$app->redirect('complete.php');
+    $app->redirect('complete.php');
 }
 
 $app->Layout->renderHeader(false);
