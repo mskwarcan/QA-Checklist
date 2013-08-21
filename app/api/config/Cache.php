@@ -35,13 +35,13 @@ class Cache
       'id' => '4682298',
       'name' => 'Angel Marquez',
       'email' => 'angel.marquez@warrendouglas.com',
-      'avatar' => 'http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_8/avatar.gif?r=3'
+      'avatar' => 'https://rollout-assets.basecamp.com/1786889/people/4682298-angel-marquez/photo/avatar.96.gif'
     );
   private $personBrianHenderson = array(
       'id' => '4631370',
       'name' => 'Brian Henderson',
       'email' => 'brian.henderson@warrendouglas.com',
-      'avatar' => 'http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_0/avatar.gif?r=3'
+      'avatar' => 'https://rollout-assets.basecamp.com/1786889/people/4631370-brian-henderson/photo/avatar.96.gif'
     );
   private $personCassidyNewton = array(
       'id' => '1885901',
@@ -83,13 +83,13 @@ class Cache
       'id' => '1775679',
       'name' => 'Samantha Jordan',
       'email' => 'amantha.jordan@warrendouglas.com',
-      'avatar' => 'https://dge9rmgqjs8m1.cloudfront.net/global/ab46bc89b4bf6e3d27d53cce5873481a1e5853edfaacb2f9aa13d750e2d13d2c50add00ce6eee1bf4c8aae0736e6529e8d50b448b72ca1019537f17c273d42a5fbcbc8a7a4db9e7a945248773d619db5/avatar.96.gif?r=3'
+      'avatar' => 'https://rollout-assets.basecamp.com/1786889/people/1775679-samantha-jordan/photo/avatar.96.gif'
     );
   private $personBillParmelee = array(
       'id' => '4396446',
       'name' => 'Bill Parmeleee',
       'email' => 'bill.parmelee@warrendouglas.com',
-      'avatar' => 'https://dge9rmgqjs8m1.cloudfront.net/global/6a692b7e272421544d6a2bea22684448db855060f4d7c2cc5266ed58c1ccc4a2b8c5625b810f72b4682380c7ec3cf7e5b7e526e9cefbe11d96a285ac2745f38d5a3f9c5f0115c4303d843a2fc7ae7ee1/avatar.96.gif?r=3'
+      'avatar' => 'https://basecamp.com/1786889/people/4396446-bill-parmelee'
     );
 
   //project sizes
