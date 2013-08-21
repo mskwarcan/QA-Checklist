@@ -73,6 +73,24 @@ class Cache
       'email' => 'stephen.russell@warrendouglas.com',
       'avatar' => 'http://dge9rmgqjs8m1.cloudfront.net/global/a4e2a4bc9771f79b92f41bbce22940c0220a8b6742e86d763c690bbc4e7271418958f84780fa75fc09432e90675369722224df8a0182e9f30e6406fa1a39094904a25df5415c4a43f131a856bc427934/avatar.gif?r=3'
     );
+  private $personDougBriley = array(
+      'id' => '697743',
+      'name' => 'Doug Briley',
+      'email' => 'doug.briley@warrendouglas.com',
+      'avatar' => 'https://dge9rmgqjs8m1.cloudfront.net/global/2a021aec19333152dc7c4ed5eee7413e5dbd0005cd5d8a341206797c94148df54b0bc4d2f428db8785452b95308d49d8dc727658db0b72270334cd29f8598c83f154cd3181a18dda84b60ea435927c7b/avatar.96.gif?r=3'
+    );
+  private $personSamanthaJordan = array(
+      'id' => '1775679',
+      'name' => 'Samantha Jordan',
+      'email' => 'amantha.jordan@warrendouglas.com',
+      'avatar' => 'https://dge9rmgqjs8m1.cloudfront.net/global/ab46bc89b4bf6e3d27d53cce5873481a1e5853edfaacb2f9aa13d750e2d13d2c50add00ce6eee1bf4c8aae0736e6529e8d50b448b72ca1019537f17c273d42a5fbcbc8a7a4db9e7a945248773d619db5/avatar.96.gif?r=3'
+    );
+  private $personBillParmelee = array(
+      'id' => '4396446',
+      'name' => 'Bill Parmeleee',
+      'email' => 'bill.parmelee@warrendouglas.com',
+      'avatar' => 'https://dge9rmgqjs8m1.cloudfront.net/global/6a692b7e272421544d6a2bea22684448db855060f4d7c2cc5266ed58c1ccc4a2b8c5625b810f72b4682380c7ec3cf7e5b7e526e9cefbe11d96a285ac2745f38d5a3f9c5f0115c4303d843a2fc7ae7ee1/avatar.96.gif?r=3'
+    );
 
   //project sizes
   private $projectSizeSmall = array(
@@ -113,6 +131,11 @@ class Cache
         $this->personAngelMarquez
     );
     $this->groups['projectmanagers'] = array(
+        $this->personScottParker,
+        $this->personMashallahBehbehani,
+        $this->personSheenaBandy,
+        $this->personBillParmelee,
+        $this->personDougBriley,
         $this->personCassidyNewton
     );
     $this->groups['accountexecutives'] = array(
@@ -120,7 +143,8 @@ class Cache
         $this->personDanaFairbanks,
         $this->personLaurenGourley,
         $this->personScottParker,
-        $this->personStephenRussel
+        $this->personStephenRussel,
+        $this->personSamanthaJordan
     );
     $this->groups['everyone'] = array(
       $this->personAngelaDavis['id'] => $this->personAngelaDavis,
@@ -134,7 +158,10 @@ class Cache
       $this->personDanaFairbanks['id'] => $this->personDanaFairbanks,
       $this->personLaurenGourley['id'] => $this->personLaurenGourley,
       $this->personScottParker['id'] => $this->personScottParker,
-      $this->personStephenRussel['id'] => $this->personStephenRussel
+      $this->personStephenRussel['id'] => $this->personStephenRussel,
+      $this->personSamanthaJordan['id'] => $this->personSamanthaJordan,
+      $this->personBillParmelee['id'] => $this->personBillParmelee,
+      $this->personDougBriley['id'] => $this->personDougBriley
     );
     $this->groups['projectsize'] = array(
         $this->projectSizeSmall,
