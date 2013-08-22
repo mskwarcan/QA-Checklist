@@ -5,13 +5,8 @@ Dynamic and project-based checklist for quality assurance. Going to have to roll
 
 To Do:
 ============
-* Make it project-based
-* Save the data to a database
-* Be able to login and manage projects
-* Be able to see progress on the QA
-* Make items able to be checked off
-* Make the ability to have conversations on items
-* Add ability to push into Basecamp
-** Be able to set your Basecamp access information
-** Be able to select project
-** Have the to do items categorized into different QA groups of to dos
+* Try to create the to do items in a single REST request, not many to possibly improve performance
+* Create a settings panel that pulls in every person in the Basecamp Person list, and you can select who is an AE, PM, Lead Developer, and Developer. That way we can still use the Person API and not have to have a local storage. It'll also help with new people getting hired or when people get shifted to different roles and we don't need to manually update the code.
+* Disable the "Create" button when you finally click submit and it's creating the tasks, etc
+* Add in a preloader after it starts creating everything to indicate it's doing something
+* Possibly create this for Traditional creative projects as well and start off by asking if this is a Creative or Digital QA list
