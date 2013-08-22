@@ -3,7 +3,7 @@ class Tasks
 {
     private $tasks_accountexecutives = array(
         //small application
-        array(
+        'small' => array(
             'Check for broken links',
             'Check all pages in website for any noticeable errors',
             'Check website on mobile phone',
@@ -22,7 +22,7 @@ class Tasks
             'Check all requirements and that all requirements are met'
         ),
         //medium application
-        array(
+        'medium' => array(
             'Check for broken links',
             'Check all pages in website for any noticeable errors',
             'Check website on mobile phone',
@@ -41,7 +41,7 @@ class Tasks
             'Check all requirements and that all requirements are met'
         ),
         //large application
-        array(
+        'large' => array(
             'Check for broken links',
             'Check all pages in website for any noticeable errors',
             'Check website on mobile phone',
@@ -63,7 +63,7 @@ class Tasks
 
     private $tasks_projectmanagers = array(
         //small application
-        array(
+        'small' => array(
             'Check for broken links',
             'Check all pages in website for any noticeable errors',
             'Check website on mobile phone',
@@ -86,7 +86,7 @@ class Tasks
             'Review Google Analytics (e.g. integration, special click tracking)'
         ),
         //medium application
-        array(
+        'medium' => array(
             'Check for broken links',
             'Check all pages in website for any noticeable errors',
             'Check website on mobile phone',
@@ -109,7 +109,7 @@ class Tasks
             'Review Google Analytics (e.g. integration, special click tracking)'
         ),
         //large application
-        array(
+        'large' => array(
             'Check for broken links',
             'Check all pages in website for any noticeable errors',
             'Check website on mobile phone',
@@ -135,7 +135,7 @@ class Tasks
 
     private $tasks_seniordeveloper = array(
         //small application
-        array(
+        'small' => array(
             'Fix broken links - http://www.brokenlinkcheck.com/',
             'Spelling and grammar',
             'Browser Check (PC & Mac) Chrome, Firefox, Safari, IE7-10 - Browsershot or Virtual Machines',
@@ -192,7 +192,7 @@ class Tasks
             'Check all requirements and that all requirements are met'
         ),
         //medium application
-        array(
+        'medium' => array(
             'Fix broken links - http://www.brokenlinkcheck.com/',
             'Spelling and grammar',
             'Browser Check (PC & Mac) Chrome, Firefox, Safari, IE7-10 - Browsershot or Virtual Machines',
@@ -259,7 +259,7 @@ class Tasks
             'Check all requirements and that all requirements are met'
         ),
         //large application
-        array(
+        'large' => array(
             'Fix broken links - http://www.brokenlinkcheck.com/',
             'Spelling and grammar',
             'Browser Check (PC & Mac) Chrome, Firefox, Safari, IE7-10 - Browsershot or Virtual Machines',
@@ -337,7 +337,7 @@ class Tasks
 
     private $tasks_developers = array(
         //small application
-        array(
+        'small' => array(
             'Fix broken links - http://www.brokenlinkcheck.com/',
             'Spelling and grammar',
             'Browser Check (PC & Mac) Chrome, Firefox, Safari, IE7-10 - Browsershot or Virtual Machines',
@@ -415,7 +415,7 @@ class Tasks
             'Add "Developed and Designed by Digital Thrive”'
         ),
         //medium application
-        array(
+        'medium' => array(
             'Fix broken links - http://www.brokenlinkcheck.com/',
             'Spelling and grammar',
             'Browser Check (PC & Mac) Chrome, Firefox, Safari, IE7-10 - Browsershot or Virtual Machines',
@@ -513,7 +513,7 @@ class Tasks
             'Add "Developed and Designed by Digital Thrive”'
         ),
         //large application
-        array(
+        'large' => array(
             'Fix broken links - http://www.brokenlinkcheck.com/',
             'Spelling and grammar',
             'Browser Check (PC & Mac) Chrome, Firefox, Safari, IE7-10 - Browsershot or Virtual Machines',
@@ -628,10 +628,28 @@ class Tasks
         )
     );
 
-    public function get($what)
+    public function get($what, $projectSize)
     {
         $group = 'tasks_' . $what;
-        return $this->$group;
+        $tasks = $this->getGroup($group, $projectSize);
+        return $tasks;
+    }
+
+    private function getGroup($group, $size) {
+        switch ($size) {
+            case 0:
+                $groupLists = $this->{$group};
+                return $groupLists['small'];
+                break;
+            case 1:
+                $groupLists = $this->{$group};
+                return $groupLists['medium'];
+                break;
+            case 2:
+                $groupLists = $this->{$group};
+                return $groupLists['large'];
+                break;
+        }
     }
 }
 ?>

@@ -132,10 +132,11 @@ class App {
     private function createToDoLists($projectData)
     {
         $proejctId = $projectData['projectData']['id'];
+        $projectSize = $projectData['projectSize']['id'];
 
         foreach($projectData['people_accountexecutives'] as $person) {
             //get the tasks
-            $tasksArr = $this->Tasks->get('accountexecutives');
+            $tasksArr = $this->Tasks->get('accountexecutives', $projectSize);
             //create to do list for user
             $listData = $this->createToDoList($person, 'Account Executive', $proejctId);
             $listId = $this->getIdFromJson($listData);
@@ -145,7 +146,7 @@ class App {
 
         foreach($projectData['people_projectmanagers'] as $person) {
             //get the tasks
-            $tasksArr = $this->Tasks->get('accountexecutives');
+            $tasksArr = $this->Tasks->get('accountexecutives', $projectSize);
             //create to do list for user
             $listData = $this->createToDoList($person, 'Project Manager', $proejctId);
             $listId = $this->getIdFromJson($listData);
@@ -155,7 +156,7 @@ class App {
 
         foreach($projectData['people_seniordeveloper'] as $person) {
             //get the tasks
-            $tasksArr = $this->Tasks->get('accountexecutives');
+            $tasksArr = $this->Tasks->get('accountexecutives', $projectSize);
             //create to do list for user
             $listData = $this->createToDoList($person, 'Senior Developer', $proejctId);
             $listId = $this->getIdFromJson($listData);
@@ -165,7 +166,7 @@ class App {
 
         foreach($projectData['people_developers'] as $person) {
             //get the tasks
-            $tasksArr = $this->Tasks->get('accountexecutives');
+            $tasksArr = $this->Tasks->get('accountexecutives', $projectSize);
             //create to do list for user
             $listData = $this->createToDoList($person, 'Developer', $proejctId);
             $listId = $this->getIdFromJson($listData);
