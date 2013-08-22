@@ -146,7 +146,7 @@ class App {
 
         foreach($projectData['people_projectmanagers'] as $person) {
             //get the tasks
-            $tasksArr = $this->Tasks->get('accountexecutives', $projectSize);
+            $tasksArr = $this->Tasks->get('projectmanagers', $projectSize);
             //create to do list for user
             $listData = $this->createToDoList($person, 'Project Manager', $proejctId);
             $listId = $this->getIdFromJson($listData);
@@ -156,7 +156,7 @@ class App {
 
         foreach($projectData['people_seniordeveloper'] as $person) {
             //get the tasks
-            $tasksArr = $this->Tasks->get('accountexecutives', $projectSize);
+            $tasksArr = $this->Tasks->get('seniordeveloper', $projectSize);
             //create to do list for user
             $listData = $this->createToDoList($person, 'Senior Developer', $proejctId);
             $listId = $this->getIdFromJson($listData);
@@ -166,7 +166,7 @@ class App {
 
         foreach($projectData['people_developers'] as $person) {
             //get the tasks
-            $tasksArr = $this->Tasks->get('accountexecutives', $projectSize);
+            $tasksArr = $this->Tasks->get('developers', $projectSize);
             //create to do list for user
             $listData = $this->createToDoList($person, 'Developer', $proejctId);
             $listId = $this->getIdFromJson($listData);
