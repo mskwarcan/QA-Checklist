@@ -17,4 +17,4 @@
 
   <body>
     <div id="container">
-      <h1>Quality Assuance Generator</h1>
+      <h1>Quality Assurance Generator</h1>
