@@ -144,7 +144,8 @@ class Cache
         $this->personLaurenGourley,
         $this->personScottParker,
         $this->personStephenRussel,
-        $this->personSamanthaJordan
+        $this->personSamanthaJordan,
+        $this->personBillParmelee,
     );
     $this->groups['everyone'] = array(
       $this->personAngelaDavis['id'] => $this->personAngelaDavis,
